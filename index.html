@@ -10,7 +10,7 @@
   <br>
   <br>
     Result:
-  <div id="result" style="font-size: 50px;"></div>  
+  <div id="result" style="font-size: 20px;"></div>  
     <script>
 		var a,b;
 		a=Math.floor(Math.random()*10 + 1);
@@ -23,7 +23,7 @@
 		num.addEventListener("keyup", function(event) {
 			if(event.keyCode===13){
 				if(ans==num.value){
-					document.getElementById("result").value=true;
+					document.getElementById("result").innerHTML=true;
 					setTimeout(function(){
 					window.location.reload(1);}, 1500);
 				}
