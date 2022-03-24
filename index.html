@@ -1,28 +1,38 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Hank Quinlan, Horrible Cop</title>
-	</head>
-	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/about">About</a></li>
-        		<li><a href="/cv">CV</a></li>
-        		<li><a href="/blog">Blog</a></li>
-    		</ul>
-		</nav>
-		<div class="container">
-    		<div class="blurb">
-        		<h1>Hi there, I'm Hank Quinlan!</h1>
-				<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
-    		</div><!-- /.blurb -->
-		</div><!-- /.container -->
-		<footer>
-    		<ul>
-        		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
-        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
-			</ul>
-		</footer>
-	</body>
+<!doctype html>
+<html> 
+ <head><title>Multiply</title></head> 
+ <body> 
+  <h1> Multiplication </h1> 
+  <div id="content" style="font-size: 50px;"></div> <br>
+  Enter your answer:
+  <input id="num"> 
+  <input type="button" onclick="submit()" id="submit" value="ok"> 
+  <br>
+  <br>
+    Result:
+  <div id="result" style="font-size: 50px;"></div>  
+    <script>
+		var a,b;
+		a=Math.floor(Math.random()*10 + 1);
+		b=Math.floor(Math.random()*10 + 10);
+		var num=document.getElementById("num");
+		document.write("<br>");
+		document.getElementById("content").
+		innerHTML=a+"*"+b;
+		var ans=a*b;
+		num.addEventListener("keyup", function(event) {
+			if(event.keyCode===13){
+				if(ans==num.value){
+					document.getElementById("result").value=true;
+					setTimeout(function(){
+					window.location.reload(1);}, 1500);
+				}
+				else {
+					document.getElementById("result").innerHTML=false;
+				}
+			num.value="";
+			}
+		});  
+    </script>
+ </body>
 </html>
